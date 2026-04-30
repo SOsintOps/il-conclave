@@ -8,7 +8,7 @@
 |-------|--------|
 | **Archetipo** | L'Avvocato del Diavolo |
 | **Soprannome** | Savonarola |
-| **Ruolo nel Conclave** | Consigliere (Fase 2) |
+| **Ruolo nel Conclave** | Advisor procedurale (Fase 2) |
 | **Framework** | [Pre-Mortem Analysis](../framework/pre-mortem.md) |
 
 ## Ispirazione storica

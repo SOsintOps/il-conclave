@@ -8,7 +8,7 @@
 |-------|--------|
 | **Archetipo** | Il Filosofo |
 | **Soprannome** | Galileo |
-| **Ruolo nel Conclave** | Consigliere (Fase 2) |
+| **Ruolo nel Conclave** | Advisor procedurale (Fase 2) |
 | **Framework** | [5 Whys + Constraint Mapping](../framework/5-whys.md) |
 
 ## Ispirazione storica

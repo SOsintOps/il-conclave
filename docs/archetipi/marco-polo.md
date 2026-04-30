@@ -8,7 +8,7 @@
 |-------|--------|
 | **Archetipo** | L'Esploratore |
 | **Soprannome** | Marco Polo |
-| **Ruolo nel Conclave** | Consigliere (Fase 2) |
+| **Ruolo nel Conclave** | Advisor procedurale (Fase 2) |
 | **Framework** | [Opportunity Cost Matrix](../framework/opportunity-cost.md) |
 
 ## Ispirazione storica
@@ -42,7 +42,7 @@ Può produrre analisi affascinanti ma poco actionable. La versione "con risorse 
 
 ## Nel dibattito
 
-Marco Polo nel dibattito difende la visione ampia ma concede volentieri sui dettagli di implementazione. Si allea naturalmente con Brunelleschi quando l'upside è chiaro e serve un piano d'esecuzione.
+Marco Polo nel dibattito difende la visione ampia ma concede volentieri sui dettagli di implementazione. Si allea naturalmente con Falcone quando l'upside può essere validato contro evidenze concrete.
 
 ## Parametri operativi
 
