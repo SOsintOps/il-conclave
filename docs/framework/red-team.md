@@ -35,7 +35,7 @@ In un council single-model come Il Conclave, il Red Team è ancora più importan
 
 ## Uso nel Conclave
 
-**Machiavelli** (Il Sabotatore) è il Red Team del Conclave. Non partecipa alle fasi precedenti — entra solo dopo che il consenso si è formato (Fase 5). Se non trova falle significative, lo dichiara onestamente: *"I couldn't break it"* dopo un tentativo serio è più prezioso di un'obiezione forzata.
+**Machiavelli** (Lo Scettico) è il Red Team del Conclave. Non partecipa alle fasi precedenti — entra solo dopo che il consenso si è formato (Fase 5). Se non trova falle significative, lo dichiara onestamente: *"I couldn't break it"* dopo un tentativo serio è più prezioso di un'obiezione forzata.
 
 ## Fonti
 

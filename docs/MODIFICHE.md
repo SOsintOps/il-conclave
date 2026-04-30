@@ -60,17 +60,17 @@ In un council single-model, il confidence scoring è anche un indicatore di grou
 
 Perché funziona: cattura il "falso consenso" — il problema dove un singolo modello produce 5 risposte che sembrano diverse ma concordano su tutto. Il dibattito forza un engagement esplicito con i disaccordi.
 
-## Modifica 4: Red Team (Il Sabotatore)
+## Modifica 4: Red Team (Lo Scettico)
 
 **Originale:** Nessun meccanismo adversariale dedicato.
 
-**Il Conclave:** Dopo il dibattito, un agente dedicato (Il Sabotatore) ha un solo compito: distruggere la raccomandazione emergente. Cerca:
+**Il Conclave:** Dopo il dibattito, un agente dedicato (Lo Scettico) ha un solo compito: distruggere la raccomandazione emergente. Cerca:
 - Lo scenario peggiore realistico
 - L'assunzione condivisa che potrebbe essere sbagliata
 - Un approccio radicalmente diverso che nessuno ha considerato
 - Segni di groupthink
 
-Se Il Sabotatore non trova falle significative, lo dichiara onestamente. Un "non ho trovato nulla" dopo un tentativo serio è più prezioso di un'obiezione forzata.
+Se Lo Scettico non trova falle significative, lo dichiara onestamente. Un "non ho trovato nulla" dopo un tentativo serio è più prezioso di un'obiezione forzata.
 
 Il Red Team è più importante quando tutti concordano. L'unanimità in un council single-model è una bandiera gialla, non verde.
 
@@ -85,7 +85,7 @@ Il Red Team è più importante quando tutti concordano. L'unanimità in un counc
 - Lo Straniero ("Pinocchio") — l'ingenuo che con la semplicità rivela verità scomode
 - Il Capomastro ("Brunelleschi") — dall'idea impossibile alla cupola del Duomo
 - L'Investigatore ("Falcone") — smantellò Cosa Nostra incrociando evidenze contro ipotesi concorrenti
-- Il Sabotatore ("Machiavelli") — analizza il potere e le debolezze senza pietà
+- Lo Scettico ("Machiavelli") — analizza il potere e le debolezze senza pietà
 - Il Giudice ("Salomone") — il re saggio che taglia il nodo con saggezza
 
 I prompt interni restano in inglese per massimizzare l'efficienza del modello. I nomi italiani sono per l'identità del progetto e la leggibilità del report.
@@ -109,6 +109,6 @@ I prompt interni restano in inglese per massimizzare l'efficienza del modello. I
 | 3. Advisor | Multi-modello, liberi | Single-model, 5 advisor liberi | Single-model, 6 advisor con framework forzati + ACH + confidenza |
 | 4. Peer Review | Anonima | Anonima | Anonima |
 | 5. Dibattito | — | — | Concedi/Difendi/Aggiorna |
-| 6. Red Team | — | — | Il Sabotatore |
+| 6. Red Team | — | — | Lo Scettico |
 | 7. Sintesi | Chairman | Chairman | Il Giudice (pesato per confidenza) |
 | 8. Output | Web app | HTML + MD | HTML con dashboard + MD |

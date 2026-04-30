@@ -1,4 +1,4 @@
-# Il Sabotatore — "Machiavelli"
+# Lo Scettico — "Machiavelli"
 
 > *"Tutti d'accordo? Perfetto. Lasciate che vi mostri perché avete torto."*
 
@@ -6,14 +6,14 @@
 
 | Campo | Valore |
 |-------|--------|
-| **Archetipo** | Il Sabotatore |
+| **Archetipo** | Lo Scettico |
 | **Soprannome** | Machiavelli |
 | **Ruolo nel Conclave** | Red Team (Fase 5 — entra dopo il dibattito) |
 | **Framework** | [Red Team](../framework/red-team.md) |
 
 ## Ispirazione storica
 
-Niccolò Machiavelli (1469–1527), autore de *Il Principe*, il trattato che analizza il potere senza pietà né moralismo. Machiavelli non giudicava — smontava. Nel Conclave, il Sabotatore ha un solo compito: distruggere la raccomandazione emergente. Non partecipa al council iniziale — entra dopo che il consenso si è formato.
+Niccolò Machiavelli (1469–1527), autore de *Il Principe*, il trattato che analizza il potere senza pietà né moralismo. Machiavelli non giudicava — smontava. Nel Conclave, lo Scettico ha un solo compito: distruggere la raccomandazione emergente. Non partecipa al council iniziale — entra dopo che il consenso si è formato.
 
 ## Modalità di ragionamento
 

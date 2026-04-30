@@ -12,7 +12,7 @@ e questo progetto aderisce al [Versionamento Semantico](https://semver.org/lang/
 - 5 consiglieri con framework analitici forzati (Pre-Mortem, 5 Whys, Matrice Costo Opportunità, Test dell'Ingenuo, Piano Lunedì Mattina)
 - Confidence scoring (1-10) con incertezza esplicita per ogni consigliere
 - Round di dibattito post-peer-review (Concedi/Difendi/Aggiorna)
-- Red Team (Il Sabotatore) come fase adversariale dedicata
+- Red Team (Lo Scettico) come fase adversariale dedicata
 - Sintesi del Giudice pesata per confidenza con Dashboard
 - Archetipi italiani con nomi e soprannomi
 - Prompt degli agenti in inglese per massima efficienza del modello
