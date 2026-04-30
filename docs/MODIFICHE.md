@@ -31,8 +31,9 @@ Il Conclave affronta questo problema con quattro interventi specifici.
 | L'Esploratore | Matrice Costo Opportunità | Costi espliciti, valore opzionale, versione 10x |
 | Lo Straniero | Test dell'Ingenuo | Cosa confonde, gergo presupposto, reazione di pancia |
 | Il Capomastro | Piano Lunedì Mattina | Prima azione concreta, prime 72 ore, test minimo |
+| L'Investigatore | ACH (Analysis of Competing Hypotheses) | Ipotesi concorrenti, matrice evidenziale, disconfirma, evidenza diagnostica mancante |
 
-Perché funziona: un Pre-Mortem forza ragionamento pessimistico all'indietro. I 5 Whys forzano profondità. La Matrice Costo Opportunità forza pensiero comparativo. Sono percorsi di ragionamento strutturalmente incompatibili, non solo "atteggiamenti diversi."
+Perché funziona: un Pre-Mortem forza ragionamento pessimistico all'indietro. I 5 Whys forzano profondità. La Matrice Costo Opportunità forza pensiero comparativo. L'ACH forza pensiero per disconfirma su ipotesi multiple. Sono percorsi di ragionamento strutturalmente incompatibili, non solo "atteggiamenti diversi."
 
 ## Modifica 2: Confidence scoring
 
@@ -83,6 +84,7 @@ Il Red Team è più importante quando tutti concordano. L'unanimità in un counc
 - L'Esploratore ("Marco Polo") — andò dove nessuno era andato, vide opportunità nel vuoto
 - Lo Straniero ("Pinocchio") — l'ingenuo che con la semplicità rivela verità scomode
 - Il Capomastro ("Brunelleschi") — dall'idea impossibile alla cupola del Duomo
+- L'Investigatore ("Falcone") — smantellò Cosa Nostra incrociando evidenze contro ipotesi concorrenti
 - Il Sabotatore ("Machiavelli") — analizza il potere e le debolezze senza pietà
 - Il Giudice ("Salomone") — il re saggio che taglia il nodo con saggezza
 
@@ -104,7 +106,7 @@ I prompt interni restano in inglese per massimizzare l'efficienza del modello. I
 |------|--------------------|-----------------------|-------------|
 | 1. Contesto | — | Scan workspace | Scan workspace |
 | 2. Framing | Domanda diretta | Riformulazione | Riformulazione |
-| 3. Advisor | Multi-modello, liberi | Single-model, liberi | Single-model, framework forzati + confidenza |
+| 3. Advisor | Multi-modello, liberi | Single-model, 5 advisor liberi | Single-model, 6 advisor con framework forzati + ACH + confidenza |
 | 4. Peer Review | Anonima | Anonima | Anonima |
 | 5. Dibattito | — | — | Concedi/Difendi/Aggiorna |
 | 6. Red Team | — | — | Il Sabotatore |

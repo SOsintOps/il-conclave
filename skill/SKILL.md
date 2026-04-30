@@ -1,13 +1,13 @@
 ---
 name: il-conclave
-description: "Run any question, idea, or decision through Il Conclave — a council of 7 Italian archetypes (L'Avvocato del Diavolo, Il Filosofo, L'Esploratore, Lo Straniero, Il Capomastro, Il Sabotatore, Il Giudice) who independently analyze it using forced analytical frameworks, peer-review anonymously, debate disagreements, survive a Red Team attack, and deliver a confidence-weighted verdict. Enhanced for single-model depth. MANDATORY TRIGGERS: 'council this', 'conclave', 'run the council', 'war room this', 'pressure-test this', 'stress-test this', 'debate this'. STRONG TRIGGERS (use when combined with a real decision or tradeoff): 'should I X or Y', 'which option', 'what would you do', 'is this the right move', 'validate this', 'get multiple perspectives', 'I can't decide', 'I'm torn between'. Do NOT trigger on simple yes/no questions, factual lookups, or casual 'should I' without a meaningful tradeoff."
+description: "Run any question, idea, or decision through Il Conclave — a council of 8 Italian archetypes (L'Avvocato del Diavolo, Il Filosofo, L'Esploratore, Lo Straniero, Il Capomastro, L'Investigatore, Il Sabotatore, Il Giudice) who independently analyze it using forced analytical frameworks, peer-review anonymously, debate disagreements, survive a Red Team attack, and deliver a confidence-weighted verdict. Enhanced for single-model depth. MANDATORY TRIGGERS: 'council this', 'conclave', 'run the council', 'war room this', 'pressure-test this', 'stress-test this', 'debate this'. STRONG TRIGGERS (use when combined with a real decision or tradeoff): 'should I X or Y', 'which option', 'what would you do', 'is this the right move', 'validate this', 'get multiple perspectives', 'I can't decide', 'I'm torn between'. Do NOT trigger on simple yes/no questions, factual lookups, or casual 'should I' without a meaningful tradeoff."
 ---
 
 # Il Conclave
 
 You ask one AI a question, you get one answer. That answer might be great. It might be mid. You have no way to tell because you only saw one perspective.
 
-Il Conclave fixes this. It runs your question through 5 independent advisors — each applying a distinct analytical framework — who analyze it, peer-review each other anonymously, debate disagreements, then face a Red Team attack before a chairman delivers a confidence-weighted verdict.
+Il Conclave fixes this. It runs your question through 6 independent advisors — each applying a distinct analytical framework — who analyze it, peer-review each other anonymously, debate disagreements, then face a Red Team attack before a chairman delivers a confidence-weighted verdict.
 
 This is adapted from Andrej Karpathy's LLM Council and tenfoldmarc's Claude skill adaptation. Il Conclave enhances both specifically for single-model environments by forcing structural divergence at the methodology level rather than relying on model diversity.
 
@@ -33,7 +33,7 @@ Bad conclave questions:
 
 ---
 
-## the seven archetypes
+## the eight archetypes
 
 Each advisor applies a specific analytical framework that constrains their reasoning path. This creates genuine divergence even from the same model.
 
@@ -73,13 +73,21 @@ Only cares about execution:
 - What resources are needed vs. available right now?
 - Where's the biggest execution risk?
 
-### 6. Il Sabotatore ("Machiavelli") — Red Team
+### 6. L'Investigatore ("Falcone") — Analysis of Competing Hypotheses (ACH)
+Generates multiple competing hypotheses and evaluates each against available evidence using a structured matrix:
+- What are the mutually exclusive hypotheses that could explain this situation?
+- For each piece of evidence: is it Consistent (C), Inconsistent (I), or Not Applicable (N/A) with each hypothesis?
+- Which hypotheses survive disconfirmation? (focus on rejecting, not confirming)
+- What evidence is missing that would be diagnostic — i.e., would distinguish between surviving hypotheses?
+- What are the key assumptions underlying each hypothesis?
+
+### 7. Il Sabotatore ("Machiavelli") — Red Team
 A dedicated adversarial agent who attacks the emerging recommendation after the debate round. Not part of the initial council — enters after consensus forms.
 
-### 7. Il Giudice ("Salomone") — Confidence-Weighted Synthesis
+### 8. Il Giudice ("Salomone") — Confidence-Weighted Synthesis
 The chairman. Receives everything: initial analyses, peer reviews, debate updates, Red Team attack. Synthesizes a verdict weighted by advisor confidence scores.
 
-**Why these frameworks create real divergence:** Pre-mortem forces pessimistic backward reasoning. 5 Whys forces depth. Opportunity cost forces comparative thinking. Fresh Eyes forces simplification. Monday Morning forces concrete specificity. These are structurally incompatible reasoning paths — not just different "vibes."
+**Why these frameworks create real divergence:** Pre-mortem forces pessimistic backward reasoning. 5 Whys forces depth. Opportunity cost forces comparative thinking. Fresh Eyes forces simplification. Monday Morning forces concrete specificity. ACH forces hypothesis-driven disconfirmation. These are structurally incompatible reasoning paths — not just different "vibes."
 
 ---
 
@@ -107,9 +115,9 @@ Don't add your own opinion. If too vague, ask one clarifying question. Just one.
 
 Save the framed question for the transcript.
 
-### step 2: convene the conclave (5 sub-agents in parallel)
+### step 2: convene the conclave (6 sub-agents in parallel)
 
-Spawn all 5 advisors simultaneously as sub-agents.
+Spawn all 6 advisors simultaneously as sub-agents.
 
 **Sub-agent prompt template:**
 ```
@@ -132,14 +140,14 @@ At the end of your analysis, add a CONFIDENCE section:
 Keep your response between 200-350 words. No preamble. Go straight into your framework analysis.
 ```
 
-### step 3: peer review (5 sub-agents in parallel)
+### step 3: peer review (6 sub-agents in parallel)
 
-Collect all 5 advisor responses. Anonymize as Response A through E (randomize mapping to avoid positional bias).
+Collect all 6 advisor responses. Anonymize as Response A through F (randomize mapping to avoid positional bias).
 
-Spawn 5 new sub-agents. Each reviewer sees all 5 anonymized responses:
+Spawn 6 new sub-agents. Each reviewer sees all 6 anonymized responses:
 
 ```
-You are reviewing the outputs of Il Conclave. Five advisors independently answered this question using different analytical frameworks:
+You are reviewing the outputs of Il Conclave. Six advisors independently answered this question using different analytical frameworks:
 ---
 [framed question]
 ---
@@ -161,18 +169,21 @@ Here are their anonymized responses:
 **Response E:**
 [response]
 
+**Response F:**
+[response]
+
 Answer these questions. Be specific. Reference responses by letter.
 
 1. Which response is the strongest? Why? Consider both reasoning quality and framework rigor.
 2. Which response has the biggest blind spot? What specific thing is it missing?
-3. What did ALL five responses miss that the conclave should consider?
+3. What did ALL six responses miss that the conclave should consider?
 4. Where do you see the sharpest genuine disagreement? (Not emphasis differences — actual conflicting conclusions.)
 5. Look at the confidence scores. Is any advisor overconfident or underconfident relative to their reasoning strength?
 
 Keep your review under 200 words. Be direct.
 ```
 
-### step 4: debate round (5 sub-agents in parallel)
+### step 4: debate round (6 sub-agents in parallel)
 
 After peer review, each advisor sees critiques and responds.
 
@@ -231,7 +242,7 @@ Keep this under 200 words. Be ruthless.
 
 ### step 6: Il Giudice — chairman synthesis
 
-The chairman gets everything: question, all 5 initial responses, all 5 peer reviews, all 5 debate updates, and the Red Team attack.
+The chairman gets everything: question, all 6 initial responses, all 6 peer reviews, all 6 debate updates, and the Red Team attack.
 
 ```
 You are Il Giudice ("Salomone") — the Chairman of Il Conclave. Synthesize the full process into a final verdict.
@@ -257,11 +268,14 @@ INITIAL ADVISOR RESPONSES:
 **Il Capomastro ("Brunelleschi") — Monday Morning:**
 [response + confidence]
 
+**L'Investigatore ("Falcone") — ACH:**
+[response + confidence]
+
 PEER REVIEWS:
-[all 5 peer reviews]
+[all 6 peer reviews]
 
 DEBATE ROUND UPDATES:
-[all 5 debate responses with updated confidence]
+[all 6 debate responses with updated confidence]
 
 RED TEAM — IL SABOTATORE ("MACHIAVELLI"):
 [Red Team response]
@@ -290,6 +304,7 @@ Produce the conclave verdict using this structure:
 - L'Esploratore: X/10 → Y/10
 - Lo Straniero: X/10 → Y/10
 - Il Capomastro: X/10 → Y/10
+- L'Investigatore: X/10 → Y/10
 - Il Sabotatore: Superato/Fallito
 - Confidenza Complessiva del Conclave: Z/10]
 
@@ -323,9 +338,9 @@ Open the HTML file after generating.
 Save as `council-transcript-[timestamp].md`:
 - Original question
 - Framed question
-- All 5 initial advisor responses with confidence
-- All 5 peer reviews (with anonymization mapping revealed)
-- All 5 debate round responses with updated confidence
+- All 6 initial advisor responses with confidence
+- All 6 peer reviews (with anonymization mapping revealed)
+- All 6 debate round responses with updated confidence
 - Il Sabotatore's attack
 - Il Giudice's full synthesis
 
@@ -347,6 +362,6 @@ council-transcript-[timestamp].md  # full transcript
 - **Always anonymize for peer review.** Prevents deference to certain archetypes.
 - **Il Giudice can disagree with the majority.** If the dissenter's reasoning is strongest, side with them.
 - **Don't convene for trivial questions.** If there's one right answer, just answer it.
-- **Confidence is king.** In single-model conclaves, confidence scoring detects real vs. superficial agreement. If all 5 advisors give 9/10, be suspicious — genuine uncertainty produces variance.
+- **Confidence is king.** In single-model conclaves, confidence scoring detects real vs. superficial agreement. If all 6 advisors give 9/10, be suspicious — genuine uncertainty produces variance.
 - **Il Sabotatore matters most when everyone agrees.** Unanimous agreement from a single model is a yellow flag, not green.
 - **Italian names, English reasoning.** The archetypes have Italian names for identity, but all prompts and reasoning run in English for maximum model performance.

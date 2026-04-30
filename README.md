@@ -1,14 +1,14 @@
 # Il Conclave
 
-**Un consiglio di 7 archetipi AI che analizza, dibatte e demolisce le tue decisioni prima che sia troppo tardi.**
+**Un consiglio di 8 archetipi AI che analizza, dibatte e demolisce le tue decisioni prima che sia troppo tardi.**
 
-Il Conclave prende una domanda, un'idea o una decisione e la passa attraverso 5 consiglieri indipendenti, una peer review anonima, un round di dibattito, un attacco Red Team e una sintesi finale pesata per confidenza. Il tutto usando un singolo modello LLM.
+Il Conclave prende una domanda, un'idea o una decisione e la passa attraverso 6 consiglieri indipendenti, una peer review anonima, un round di dibattito, un attacco Red Team e una sintesi finale pesata per confidenza. Il tutto usando un singolo modello LLM.
 
 Questo progetto nasce dallo studio della metodologia [LLM Council di Andrej Karpathy](https://github.com/karpathy/llm-council) e della sua [adattazione come skill per Claude](https://github.com/tenfoldmarc/llm-council-skill) di tenfoldmarc. Il Conclave estende entrambi con modifiche pensate per compensare il limite principale dell'approccio single-model: la mancanza di vera diversità tra gli advisor.
 
 ---
 
-## I Sette Archetipi
+## Gli Otto Archetipi
 
 | Archetipo | Soprannome | Framework | Ruolo |
 |-----------|-----------|-----------|-------|
@@ -17,6 +17,7 @@ Questo progetto nasce dallo studio della metodologia [LLM Council di Andrej Karp
 | [**L'Esploratore**](docs/archetipi/marco-polo.md) | *Marco Polo* | [Matrice Costo Opportunità](docs/framework/opportunity-cost.md) | Cerca l'upside che tutti gli altri ignorano |
 | [**Lo Straniero**](docs/archetipi/pinocchio.md) | *Pinocchio* | [Test dell'Ingenuo](docs/framework/fresh-eyes.md) | Vede quello che gli esperti non vedono più |
 | [**Il Capomastro**](docs/archetipi/brunelleschi.md) | *Brunelleschi* | [Piano Lunedì Mattina](docs/framework/monday-morning.md) | Trasforma le idee in azioni concrete entro 72 ore |
+| [**L'Investigatore**](docs/archetipi/falcone.md) | *Falcone* | [ACH](docs/framework/ach.md) | Genera ipotesi concorrenti e le valuta contro le evidenze |
 | [**Il Sabotatore**](docs/archetipi/machiavelli.md) | *Machiavelli* | [Red Team](docs/framework/red-team.md) | Tenta di distruggere la raccomandazione emergente |
 | [**Il Giudice**](docs/archetipi/salomone.md) | *Salomone* | [Sintesi pesata](docs/framework/confidence-weighted.md) | Sintetizza il verdetto finale pesando la confidenza |
 
@@ -38,11 +39,11 @@ Domanda dell'utente
 └──────┬───────┘
        │
        ▼
-┌──────────────────────────────────────────────────┐
-│           5 Consiglieri in Parallelo              │
-│  Avvocato │ Filosofo │ Esploratore │ Straniero │ Capomastro │
-│  + Confidenza 1-10 per ciascuno                  │
-└──────────────────┬───────────────────────────────┘
+┌───────────────────────────────────────────────────────────────┐
+│                 6 Consiglieri in Parallelo                     │
+│  Avvocato │ Filosofo │ Esploratore │ Straniero │ Capomastro │ Investigatore │
+│  + Confidenza 1-10 per ciascuno                               │
+└──────────────────────────┬────────────────────────────────────┘
                    │
                    ▼
 ┌──────────────────────────────────────────────────┐
