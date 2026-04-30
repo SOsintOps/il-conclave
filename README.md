@@ -12,13 +12,13 @@ Questo progetto nasce dallo studio della metodologia [LLM Council di Andrej Karp
 
 | Archetipo | Soprannome | Framework | Ruolo |
 |-----------|-----------|-----------|-------|
-| **L'Avvocato del Diavolo** | *Savonarola* | Pre-Mortem | Assume che la decisione sia già fallita e spiega perché |
-| **Il Filosofo** | *Galileo* | 5 Whys + Vincoli | Scava fino alla radice del problema reale |
-| **L'Esploratore** | *Marco Polo* | Matrice Costo Opportunità | Cerca l'upside che tutti gli altri ignorano |
-| **Lo Straniero** | *Pinocchio* | Test dell'Ingenuo | Vede quello che gli esperti non vedono più |
-| **Il Capomastro** | *Brunelleschi* | Piano Lunedì Mattina | Trasforma le idee in azioni concrete entro 72 ore |
-| **Il Sabotatore** | *Machiavelli* | Red Team | Tenta di distruggere la raccomandazione emergente |
-| **Il Giudice** | *Salomone* | Sintesi pesata | Sintetizza il verdetto finale pesando la confidenza |
+| [**L'Avvocato del Diavolo**](docs/archetipi/savonarola.md) | *Savonarola* | [Pre-Mortem](docs/framework/pre-mortem.md) | Assume che la decisione sia già fallita e spiega perché |
+| [**Il Filosofo**](docs/archetipi/galileo.md) | *Galileo* | [5 Whys + Vincoli](docs/framework/5-whys.md) | Scava fino alla radice del problema reale |
+| [**L'Esploratore**](docs/archetipi/marco-polo.md) | *Marco Polo* | [Matrice Costo Opportunità](docs/framework/opportunity-cost.md) | Cerca l'upside che tutti gli altri ignorano |
+| [**Lo Straniero**](docs/archetipi/pinocchio.md) | *Pinocchio* | [Test dell'Ingenuo](docs/framework/fresh-eyes.md) | Vede quello che gli esperti non vedono più |
+| [**Il Capomastro**](docs/archetipi/brunelleschi.md) | *Brunelleschi* | [Piano Lunedì Mattina](docs/framework/monday-morning.md) | Trasforma le idee in azioni concrete entro 72 ore |
+| [**Il Sabotatore**](docs/archetipi/machiavelli.md) | *Machiavelli* | [Red Team](docs/framework/red-team.md) | Tenta di distruggere la raccomandazione emergente |
+| [**Il Giudice**](docs/archetipi/salomone.md) | *Salomone* | [Sintesi pesata](docs/framework/confidence-weighted.md) | Sintetizza il verdetto finale pesando la confidenza |
 
 ## Come Funziona
 
