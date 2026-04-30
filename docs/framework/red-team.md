@@ -1,6 +1,6 @@
-# Red Team
+# Steelman-then-Attack (Red Team)
 
-> Il tuo compito è distruggere la raccomandazione. Trova la falla fatale.
+> Prima dimostra di aver capito. Poi distruggi.
 
 ## Origini
 
@@ -33,9 +33,18 @@ Il Red Team contrasta due bias critici:
 
 In un council single-model come Il Conclave, il Red Team è ancora più importante: l'unanimità di 5 consiglieri generati dallo stesso modello è una bandiera gialla, non verde.
 
+## Steelman-then-Attack
+
+Il Conclave v0.2 evolve il Red Team puro in un formato **Steelman-then-Attack**. La ricerca (Nature 2026) mostra che un singolo agente adversariale puro può abbassare l'accuratezza del 10-40%. Il formato in due fasi mitiga questo rischio:
+
+1. **Fase Steelman:** L'agente articola la versione più forte possibile della raccomandazione — migliore di come l'hanno formulata gli advisor. Questo forza comprensione genuina e previene attacchi a strawman.
+2. **Fase Attack:** Solo dopo aver dimostrato di aver capito, l'agente attacca. L'attacco è più preciso perché parte dalla versione più forte, non da una caricatura.
+
+Un "I couldn't break it" dopo un steelman serio è il segnale più forte che il Conclave può produrre.
+
 ## Uso nel Conclave
 
-**Machiavelli** (Lo Scettico) è il Red Team del Conclave. Non partecipa alle fasi precedenti — entra solo dopo che il consenso si è formato (Fase 5). Se non trova falle significative, lo dichiara onestamente: *"I couldn't break it"* dopo un tentativo serio è più prezioso di un'obiezione forzata.
+**Machiavelli** (Lo Scettico) esegue lo Steelman-then-Attack nella Fase 5. Non partecipa alle fasi precedenti — entra solo dopo che il consenso si è formato. Se non trova falle significative dopo il steelman, lo dichiara onestamente.
 
 ## Fonti
 

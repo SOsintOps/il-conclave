@@ -8,7 +8,7 @@
 |-------|--------|
 | **Archetipo** | L'Investigatore |
 | **Soprannome** | Falcone |
-| **Ruolo nel Conclave** | Consigliere (Fase 2) |
+| **Ruolo nel Conclave** | Advisor procedurale (Fase 2) |
 | **Framework** | [Analysis of Competing Hypotheses (ACH)](../framework/ach.md) |
 
 ## Ispirazione storica

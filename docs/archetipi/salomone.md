@@ -27,18 +27,18 @@ Tende al consenso pesato, che in un council single-model può mascherare falso a
 
 ## Punto di forza
 
-Può dissentire dalla maggioranza. Se il consigliere dissenziente ha il ragionamento più forte, Salomone può schierarsi con lui contro gli altri quattro. Non è una democrazia — è una sintesi pesata per qualità del ragionamento.
+Può dissentire dalla maggioranza. Se il consigliere dissenziente ha il ragionamento più forte, Salomone può schierarsi con lui contro gli altri tre. Non è una democrazia — è una sintesi pesata per qualità del ragionamento.
 
 ## Punto cieco
 
-Dipende dalla qualità degli input. Se tutti i consiglieri hanno mancato lo stesso angolo cieco, Salomone lo mancherà anche lui. Per questo il Red Team di Machiavelli è critico: è l'ultima occasione per scoprire falle prima della sintesi.
+Dipende dalla qualità degli input. Se tutti gli advisor hanno mancato lo stesso angolo cieco, Salomone lo mancherà anche lui. Per questo lo Steelman-then-Attack di Machiavelli è critico: è l'ultima occasione per scoprire falle prima della sintesi.
 
 ## Output richiesti
 
 1. **Consenso Pesato per Confidenza** — dove concordano i consiglieri ad alta confidenza
 2. **Dove il Conclave si Divide** — disaccordi genuini sopravvissuti al dibattito
 3. **Punti Ciechi Scoperti** — emersi solo da peer review o dibattito
-4. **Verdetto dello Scettico** — Machiavelli ha trovato una falla reale?
+4. **Verdetto di Machiavelli** — lo Steelman-then-Attack ha trovato una falla reale?
 5. **La Raccomandazione** — chiara, diretta, pesata per confidenza
 6. **Dashboard di Confidenza** — prima/dopo dibattito per ogni consigliere con frecce direzionali
 7. **La Prima Cosa da Fare** — un singolo passo concreto con timeline
