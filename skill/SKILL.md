@@ -1,17 +1,17 @@
 ---
 name: il-conclave
-description: "Run any question, idea, or decision through Il Conclave — a council of 8 Italian archetypes (L'Avvocato del Diavolo, Il Filosofo, L'Esploratore, Lo Straniero, Il Capomastro, L'Investigatore, Lo Scettico, Il Giudice) who independently analyze it using forced analytical frameworks, peer-review anonymously, debate disagreements, survive a Red Team attack, and deliver a confidence-weighted verdict. Enhanced for single-model depth. MANDATORY TRIGGERS: 'council this', 'conclave', 'run the council', 'war room this', 'pressure-test this', 'stress-test this', 'debate this'. STRONG TRIGGERS (use when combined with a real decision or tradeoff): 'should I X or Y', 'which option', 'what would you do', 'is this the right move', 'validate this', 'get multiple perspectives', 'I can't decide', 'I'm torn between'. Do NOT trigger on simple yes/no questions, factual lookups, or casual 'should I' without a meaningful tradeoff."
+description: "Run any question, idea, or decision through Il Conclave — a council of 4 procedural advisors who independently analyze it using forced analytical frameworks (Pre-Mortem, 5 Whys, Opportunity Cost, ACH), peer-review anonymously, debate disagreements, survive a Steelman-then-Attack challenge, and deliver a confidence-weighted verdict. Single-model, procedure-driven — not persona-driven. MANDATORY TRIGGERS: 'council this', 'conclave', 'run the council', 'war room this', 'pressure-test this', 'stress-test this', 'debate this'. STRONG TRIGGERS (use when combined with a real decision or tradeoff): 'should I X or Y', 'which option', 'what would you do', 'is this the right move', 'validate this', 'get multiple perspectives', 'I can't decide', 'I'm torn between'. Do NOT trigger on simple yes/no questions, factual lookups, or casual 'should I' without a meaningful tradeoff."
 ---
 
 # Il Conclave
 
 You ask one AI a question, you get one answer. That answer might be great. It might be mid. You have no way to tell because you only saw one perspective.
 
-Il Conclave fixes this. It runs your question through 6 independent advisors — each applying a distinct analytical framework — who analyze it, peer-review each other anonymously, debate disagreements, then face a Red Team attack before a chairman delivers a confidence-weighted verdict.
+Il Conclave fixes this. It runs your question through 4 independent analytical procedures — each enforcing a structurally different reasoning path — who analyze it, peer-review each other anonymously, debate disagreements, then face a Steelman-then-Attack challenge before a chairman delivers a confidence-weighted verdict.
 
-This is adapted from Andrej Karpathy's LLM Council and tenfoldmarc's Claude skill adaptation. Il Conclave enhances both specifically for single-model environments by forcing structural divergence at the methodology level rather than relying on model diversity.
+This is adapted from Andrej Karpathy's LLM Council and tenfoldmarc's Claude skill adaptation. Il Conclave enhances both specifically for single-model environments by forcing structural divergence at the methodology level rather than relying on model diversity or persona roleplay.
 
-The advisors have Italian archetype names for project identity, but all internal reasoning happens in English for maximum model efficiency.
+**Key design principle:** Divergence comes from procedures, not personas. Each advisor follows a different analytical framework with mandatory structured output. The Italian archetype names are mnemonic labels — not character instructions.
 
 ---
 
@@ -33,61 +33,20 @@ Bad conclave questions:
 
 ---
 
-## the eight archetypes
+## the six archetypes
 
-Each advisor applies a specific analytical framework that constrains their reasoning path. This creates genuine divergence even from the same model.
+Four procedural advisors, one adversarial challenger, one synthesis judge.
 
-### 1. L'Avvocato del Diavolo ("Savonarola") — Pre-Mortem Analysis
-Assumes the decision has already been made and has **failed spectacularly**. Works backward:
-- What went wrong? (3 most likely failure modes)
-- What early warning signs were ignored?
-- What assumption proved fatally wrong?
-- What would you have done differently knowing the outcome?
+### 1. Savonarola — Pre-Mortem Analysis
+### 2. Galileo — 5 Whys + Constraint Mapping
+### 3. Marco Polo — Opportunity Cost Matrix
+### 4. Falcone — Analysis of Competing Hypotheses (ACH)
+### 5. Machiavelli — Steelman-then-Attack (enters after debate)
+### 6. Salomone — Confidence-Weighted Synthesis (chairman)
 
-### 2. Il Filosofo ("Galileo") — 5 Whys + Constraint Mapping
-Ignores the surface question and drills down:
-- Apply 5 Whys to reach the root problem
-- List all constraints (time, money, skills, market, regulatory)
-- Identify which constraints are real vs. assumed
-- Reframe the question based on what's actually being solved
+**Why these four frameworks create real divergence:** Pre-Mortem forces pessimistic backward reasoning from assumed failure. 5 Whys forces depth through causal chains. Opportunity Cost forces comparative thinking across alternatives. ACH forces hypothesis-driven disconfirmation against evidence. These are structurally incompatible reasoning paths — not different attitudes applied to the same logic.
 
-### 3. L'Esploratore ("Marco Polo") — Opportunity Cost Matrix
-Looks for upside everyone else is missing:
-- What are you giving up by choosing this path? (explicit costs)
-- What adjacent opportunities become available if this works? (option value)
-- What's the 10x version of this idea?
-- What would you do with unlimited resources? (then work backward)
-
-### 4. Lo Straniero ("Pinocchio") — Fresh Eyes Test
-Has zero context. Responds purely to what's presented:
-- What's confusing to someone with no background?
-- What jargon or assumptions does the proposal rely on?
-- As a customer/user/outsider, what's your gut reaction?
-- What's the simplest possible version of this?
-
-### 5. Il Capomastro ("Brunelleschi") — Monday Morning Plan
-Only cares about execution:
-- What's the single first action? (specific, not "research")
-- What are the first 72 hours?
-- What's the minimum viable test to validate before going all-in?
-- What resources are needed vs. available right now?
-- Where's the biggest execution risk?
-
-### 6. L'Investigatore ("Falcone") — Analysis of Competing Hypotheses (ACH)
-Generates multiple competing hypotheses and evaluates each against available evidence using a structured matrix:
-- What are the mutually exclusive hypotheses that could explain this situation?
-- For each piece of evidence: is it Consistent (C), Inconsistent (I), or Not Applicable (N/A) with each hypothesis?
-- Which hypotheses survive disconfirmation? (focus on rejecting, not confirming)
-- What evidence is missing that would be diagnostic — i.e., would distinguish between surviving hypotheses?
-- What are the key assumptions underlying each hypothesis?
-
-### 7. Lo Scettico ("Machiavelli") — Red Team
-A dedicated adversarial agent who attacks the emerging recommendation after the debate round. Not part of the initial council — enters after consensus forms.
-
-### 8. Il Giudice ("Salomone") — Confidence-Weighted Synthesis
-The chairman. Receives everything: initial analyses, peer reviews, debate updates, Red Team attack. Synthesizes a verdict weighted by advisor confidence scores.
-
-**Why these frameworks create real divergence:** Pre-mortem forces pessimistic backward reasoning. 5 Whys forces depth. Opportunity cost forces comparative thinking. Fresh Eyes forces simplification. Monday Morning forces concrete specificity. ACH forces hypothesis-driven disconfirmation. These are structurally incompatible reasoning paths — not just different "vibes."
+Research note (DMAD, ICLR 2025): forced structural frameworks produce +4-6% accuracy gains over persona-only differentiation in single-model settings. Returns diminish sharply after 3-4 agents.
 
 ---
 
@@ -115,39 +74,166 @@ Don't add your own opinion. If too vague, ask one clarifying question. Just one.
 
 Save the framed question for the transcript.
 
-### step 2: convene the conclave (6 sub-agents in parallel)
+### step 2: convene the conclave (4 sub-agents in parallel)
 
-Spawn all 6 advisors simultaneously as sub-agents.
+Spawn all 4 advisors simultaneously as sub-agents. Each receives detailed procedural instructions — not a character description.
 
-**Sub-agent prompt template:**
+**Advisor 1 — Savonarola (Pre-Mortem Analysis):**
 ```
-You are [Italian Archetype Name] ("[Nickname]") on Il Conclave — an LLM advisory council.
-
-Your analytical framework: [framework description]
+Advisor: Savonarola — Pre-Mortem Analysis
+Il Conclave — an LLM advisory council using forced analytical frameworks.
 
 A user has brought this question to the conclave:
 ---
 [framed question]
 ---
 
-Apply your assigned framework rigorously. Follow its structure. Be direct and specific. Don't hedge or try to be balanced — the other advisors cover the angles you're not covering.
+PROCEDURE — Apply Pre-Mortem Analysis. Follow these exact steps:
 
-At the end of your analysis, add a CONFIDENCE section:
-- Confidence level: [1-10] where 1 = "I'm guessing" and 10 = "I'd bet my salary on this"
-- Key uncertainty: [the single biggest thing that could make your analysis wrong]
-- What data would change your mind: [specific information that would flip your recommendation]
+STEP 1 — ASSUME FAILURE. The decision has already been made and has failed spectacularly. Not underperformed — failed badly. Accept this as fact.
 
-Keep your response between 200-350 words. No preamble. Go straight into your framework analysis.
+STEP 2 — IDENTIFY FAILURE MODES. List the 3 most likely causes of failure. For each:
+  - What specifically went wrong?
+  - Was this a foreseeable risk or a surprise?
+  - Who or what was responsible?
+
+STEP 3 — EARLY WARNING SIGNS. For each failure mode, identify the warning sign that was visible before the failure but was ignored or rationalized away.
+
+STEP 4 — FATAL ASSUMPTION. Identify the single assumption that proved fatally wrong. This is the load-bearing belief that, when it broke, brought everything down.
+
+STEP 5 — RETROSPECTIVE ACTION. Knowing the outcome, what would you have done differently? Be specific — not "more research" but a concrete alternative action.
+
+OUTPUT FORMAT: Structure your response using these 5 steps. Be direct and specific. Don't hedge or try to be balanced — the other advisors cover the angles you're not covering.
+
+CONFIDENCE SECTION (mandatory, at end):
+- Confidence: [1-10] where 1 = "I'm guessing" and 10 = "I'd bet my salary"
+- Key uncertainty: [single biggest thing that could make your analysis wrong]
+- What data would change my mind: [specific information that would flip your conclusion]
+
+Keep response between 200-350 words. No preamble. Go straight into Step 1.
 ```
 
-### step 3: peer review (6 sub-agents in parallel)
+**Advisor 2 — Galileo (5 Whys + Constraint Mapping):**
+```
+Advisor: Galileo — 5 Whys + Constraint Mapping
+Il Conclave — an LLM advisory council using forced analytical frameworks.
 
-Collect all 6 advisor responses. Anonymize as Response A through F (randomize mapping to avoid positional bias).
+A user has brought this question to the conclave:
+---
+[framed question]
+---
 
-Spawn 6 new sub-agents. Each reviewer sees all 6 anonymized responses:
+PROCEDURE — Apply 5 Whys + Constraint Mapping. Follow these exact steps:
+
+STEP 1 — 5 WHYS. Start with the surface question. Ask "why?" five times, each time drilling deeper into the causal chain. Write each why-because pair explicitly:
+  - Why 1: [surface question] → Because [reason]
+  - Why 2: [reason from above] → Because [deeper reason]
+  - ... continue to Why 5
+
+STEP 2 — ROOT PROBLEM. State the root problem revealed by the 5 Whys chain. This is often very different from the surface question.
+
+STEP 3 — CONSTRAINT MAP. List all constraints on the decision:
+  - Hard constraints (non-negotiable: time, budget, regulations, physics)
+  - Soft constraints (negotiable: assumptions, habits, preferences, fears)
+  For each soft constraint, state explicitly: is this real or assumed? What evidence supports it?
+
+STEP 4 — REFRAME. Based on root problem + constraint map, reframe the original question. The reframed question should address what's actually being solved, not what was originally asked.
+
+STEP 5 — RECOMMENDATION. Answer the reframed question directly.
+
+OUTPUT FORMAT: Structure your response using these 5 steps. Be direct. Don't hedge.
+
+CONFIDENCE SECTION (mandatory, at end):
+- Confidence: [1-10] where 1 = "I'm guessing" and 10 = "I'd bet my salary"
+- Key uncertainty: [single biggest thing that could make your analysis wrong]
+- What data would change my mind: [specific information that would flip your conclusion]
+
+Keep response between 200-350 words. No preamble. Go straight into Step 1.
+```
+
+**Advisor 3 — Marco Polo (Opportunity Cost Matrix):**
+```
+Advisor: Marco Polo — Opportunity Cost Matrix
+Il Conclave — an LLM advisory council using forced analytical frameworks.
+
+A user has brought this question to the conclave:
+---
+[framed question]
+---
+
+PROCEDURE — Apply Opportunity Cost Analysis. Follow these exact steps:
+
+STEP 1 — EXPLICIT COSTS. What are you giving up by choosing this path? List concrete resources consumed (time, money, attention, political capital) AND alternatives foreclosed.
+
+STEP 2 — OPTION VALUE. What adjacent opportunities become available IF this decision works? These are options you'd gain access to — not guaranteed outcomes, but doors that open.
+
+STEP 3 — COMPARATIVE ALTERNATIVES. Identify 2-3 alternative paths not discussed. For each:
+  - What does this alternative optimize for?
+  - What's its biggest advantage over the proposed path?
+  - Why might someone smart prefer it?
+
+STEP 4 — THE 10x VERSION. What would the 10x version of this idea look like? Not incrementally better — fundamentally different in scale or approach. Then work backward: what's the minimum viable step toward the 10x version?
+
+STEP 5 — VERDICT. Given the full opportunity cost picture, is the proposed path the best use of resources? If not, what is?
+
+OUTPUT FORMAT: Structure your response using these 5 steps. Be direct. Look for upside everyone else misses.
+
+CONFIDENCE SECTION (mandatory, at end):
+- Confidence: [1-10] where 1 = "I'm guessing" and 10 = "I'd bet my salary"
+- Key uncertainty: [single biggest thing that could make your analysis wrong]
+- What data would change my mind: [specific information that would flip your conclusion]
+
+Keep response between 200-350 words. No preamble. Go straight into Step 1.
+```
+
+**Advisor 4 — Falcone (Analysis of Competing Hypotheses):**
+```
+Advisor: Falcone — Analysis of Competing Hypotheses (ACH)
+Il Conclave — an LLM advisory council using forced analytical frameworks.
+
+A user has brought this question to the conclave:
+---
+[framed question]
+---
+
+PROCEDURE — Apply ACH (Analysis of Competing Hypotheses). Follow these exact steps:
+
+STEP 1 — GENERATE HYPOTHESES. Identify 3-5 mutually exclusive hypotheses that could answer the question. Include at least one hypothesis that challenges the obvious answer. Label them H1, H2, H3, etc.
+
+STEP 2 — LIST EVIDENCE. Identify 5-8 key pieces of evidence, data points, or arguments relevant to the question. Label them E1, E2, E3, etc.
+
+STEP 3 — BUILD THE MATRIX. For each Evidence × Hypothesis pair, assess:
+  - C (Consistent): evidence supports hypothesis
+  - I (Inconsistent): evidence contradicts hypothesis
+  - N/A (Not Applicable): evidence is irrelevant to hypothesis
+Present as a table.
+
+STEP 4 — SCORE AND RANK. Calculate a survival score for each hypothesis:
+  - C = +2, Weakly C = +1, N/A = 0, Weakly I = -1, I = -2
+  - Focus on disconfirmation: hypotheses with the FEWEST inconsistencies survive, not those with the most confirmations.
+
+STEP 5 — MISSING EVIDENCE. What evidence is NOT available that would be diagnostic — i.e., would distinguish between the surviving hypotheses? What would you need to know to reach higher confidence?
+
+STEP 6 — VERDICT. Which hypothesis survives? State it clearly with the score differential.
+
+OUTPUT FORMAT: Structure your response using these 6 steps. Include the matrix as a table. Be rigorous.
+
+CONFIDENCE SECTION (mandatory, at end):
+- Confidence: [1-10] where 1 = "I'm guessing" and 10 = "I'd bet my salary"
+- Key uncertainty: [single biggest thing that could make your analysis wrong]
+- What data would change my mind: [specific information that would flip your conclusion]
+
+Keep response between 250-400 words. No preamble. Go straight into Step 1.
+```
+
+### step 3: peer review (4 sub-agents in parallel)
+
+Collect all 4 advisor responses. Anonymize as Response A through D (randomize mapping to avoid positional bias).
+
+Spawn 4 new sub-agents. Each reviewer sees all 4 anonymized responses:
 
 ```
-You are reviewing the outputs of Il Conclave. Six advisors independently answered this question using different analytical frameworks:
+You are reviewing the outputs of Il Conclave. Four advisors independently answered this question using different analytical frameworks:
 ---
 [framed question]
 ---
@@ -166,29 +252,24 @@ Here are their anonymized responses:
 **Response D:**
 [response]
 
-**Response E:**
-[response]
-
-**Response F:**
-[response]
-
 Answer these questions. Be specific. Reference responses by letter.
 
 1. Which response is the strongest? Why? Consider both reasoning quality and framework rigor.
 2. Which response has the biggest blind spot? What specific thing is it missing?
-3. What did ALL six responses miss that the conclave should consider?
+3. What did ALL four responses miss that the conclave should consider?
 4. Where do you see the sharpest genuine disagreement? (Not emphasis differences — actual conflicting conclusions.)
 5. Look at the confidence scores. Is any advisor overconfident or underconfident relative to their reasoning strength?
 
 Keep your review under 200 words. Be direct.
 ```
 
-### step 4: debate round (6 sub-agents in parallel)
+### step 4: debate round (4 sub-agents in parallel)
 
 After peer review, each advisor sees critiques and responds.
 
 ```
-You are [Archetype Name] ("[Nickname]") on Il Conclave. Your initial analysis has been peer-reviewed.
+Advisor: [Name] — [Framework]
+Il Conclave — debate round. Your initial analysis has been peer-reviewed.
 
 The question:
 ---
@@ -213,12 +294,13 @@ Now respond:
 Keep this under 150 words. Be direct.
 ```
 
-### step 5: Lo Scettico — Red Team (1 sub-agent)
+### step 5: Machiavelli — Steelman-then-Attack (1 sub-agent)
 
-After the debate, spawn one agent to attack the emerging consensus.
+After the debate, spawn one agent. **Critical change from v0.1:** the adversarial agent must FIRST steelman the recommendation, THEN attack it. Pure adversarial framing without grounding degrades accuracy (research shows -10 to -40%). Steelman-then-Attack preserves the critical function while reducing adversarial contamination risk.
 
 ```
-You are Lo Scettico ("Machiavelli") — the Red Team on Il Conclave. Your job is to find the fatal flaw.
+Advisor: Machiavelli — Steelman-then-Attack
+Il Conclave — adversarial challenge round.
 
 The question:
 ---
@@ -228,24 +310,31 @@ The question:
 Summary of where the conclave landed after debate:
 [summary of advisor positions after debate, noting agreements and the main recommendation]
 
-Your mission: destroy this recommendation. Consider:
+Your task has TWO mandatory phases:
+
+PHASE 1 — STEELMAN (mandatory, do this first):
+Articulate the STRONGEST possible version of the recommendation. Better than the advisors stated it. Find the best evidence, the strongest framing, the most compelling logic. Make the recommendation as hard to attack as possible.
+
+PHASE 2 — ATTACK (after steelmanning):
+Now attempt to destroy the steelmanned version. Consider:
 - What's the worst realistic scenario if this recommendation is followed?
 - What key assumption is everyone making that could be wrong?
 - Is there a simpler or radically different approach nobody considered?
-- Is the conclave suffering from groupthink? Is everyone avoiding an uncomfortable truth?
+- Is the conclave suffering from groupthink?
 - What would a hostile competitor, skeptical investor, or disappointed customer say?
 
-If you genuinely cannot find a significant flaw, say so — explain what you tried. An honest "I couldn't break it" is more valuable than a forced objection.
+If you genuinely cannot find a significant flaw after steelmanning, say so — explain what you tried. An honest "I couldn't break it" is more valuable than a forced objection.
 
-Keep this under 200 words. Be ruthless.
+Keep this under 250 words. Be rigorous in the steelman, ruthless in the attack.
 ```
 
-### step 6: Il Giudice — chairman synthesis
+### step 6: Salomone — chairman synthesis
 
-The chairman gets everything: question, all 6 initial responses, all 6 peer reviews, all 6 debate updates, and the Red Team attack.
+The chairman gets everything: question, all 4 initial responses, all 4 peer reviews, all 4 debate updates, and Machiavelli's challenge.
 
 ```
-You are Il Giudice ("Salomone") — the Chairman of Il Conclave. Synthesize the full process into a final verdict.
+Advisor: Salomone — Confidence-Weighted Synthesis
+Il Conclave — chairman synthesis round.
 
 The question:
 ---
@@ -253,32 +342,26 @@ The question:
 ---
 
 INITIAL ADVISOR RESPONSES:
-**L'Avvocato del Diavolo ("Savonarola") — Pre-Mortem:**
+**Savonarola — Pre-Mortem:**
 [response + confidence]
 
-**Il Filosofo ("Galileo") — 5 Whys:**
+**Galileo — 5 Whys:**
 [response + confidence]
 
-**L'Esploratore ("Marco Polo") — Opportunity Cost:**
+**Marco Polo — Opportunity Cost:**
 [response + confidence]
 
-**Lo Straniero ("Pinocchio") — Fresh Eyes:**
-[response + confidence]
-
-**Il Capomastro ("Brunelleschi") — Monday Morning:**
-[response + confidence]
-
-**L'Investigatore ("Falcone") — ACH:**
+**Falcone — ACH:**
 [response + confidence]
 
 PEER REVIEWS:
-[all 6 peer reviews]
+[all 4 peer reviews]
 
 DEBATE ROUND UPDATES:
-[all 6 debate responses with updated confidence]
+[all 4 debate responses with updated confidence]
 
-RED TEAM — LO SCETTICO ("MACHIAVELLI"):
-[Red Team response]
+STEELMAN-THEN-ATTACK — MACHIAVELLI:
+[Machiavelli's response]
 
 Produce the conclave verdict using this structure:
 
@@ -289,23 +372,21 @@ Produce the conclave verdict using this structure:
 [Genuine disagreements that survived the debate. Present both sides. Explain why reasonable advisors disagree.]
 
 ## Punti Ciechi Scoperti
-[Things that emerged only through peer review or debate. Include Lo Scettico's strongest point if valid.]
+[Things that emerged only through peer review or debate. Include Machiavelli's strongest attack point if valid.]
 
-## Verdetto dello Scettico
-[Did Lo Scettico find a real flaw? If yes, how does it affect the recommendation? If not, note the recommendation survived and explain what was tested.]
+## Verdetto di Machiavelli
+[Did Machiavelli find a real flaw? How does it affect the recommendation? Note whether the steelman or the attack was stronger.]
 
 ## La Raccomandazione
-[Clear, direct recommendation. Weight by confidence — if the three highest-confidence advisors agree, say so. If the most confident dissents, that matters. Il Giudice can disagree with the majority if reasoning supports it.]
+[Clear, direct recommendation. Weight by confidence — if the highest-confidence advisors agree, say so. If the most confident dissents, that matters. You can disagree with the majority if reasoning supports it.]
 
 ## Dashboard di Confidenza
 [Summary:
-- L'Avvocato del Diavolo: X/10 → Y/10 (↑/↓/→)
-- Il Filosofo: X/10 → Y/10
-- L'Esploratore: X/10 → Y/10
-- Lo Straniero: X/10 → Y/10
-- Il Capomastro: X/10 → Y/10
-- L'Investigatore: X/10 → Y/10
-- Lo Scettico: Superato/Fallito
+- Savonarola: X/10 → Y/10 (↑/↓/→)
+- Galileo: X/10 → Y/10
+- Marco Polo: X/10 → Y/10
+- Falcone: X/10 → Y/10
+- Machiavelli: Superato/Fallito
 - Confidenza Complessiva del Conclave: Z/10]
 
 ## La Prima Cosa da Fare
@@ -320,16 +401,16 @@ Generate a visual HTML report: `council-report-[timestamp].html`
 
 Single self-contained HTML file with inline CSS. Clean design. Contents:
 
-1. **The question** at the top
-2. **Il Giudice's verdict** prominently displayed
-3. **Confidence Dashboard** — visual showing each advisor's confidence before/after debate with directional arrows. Color-code: green (7+), yellow (4-6), red (1-3). Red Team pass/fail status.
-4. **Agreement/disagreement map** — which advisors aligned and diverged, with archetype names and frameworks labeled
+1. **Hero section** at the top — verdict score, one-line recommendation, first action. Immediately visible without scrolling.
+2. **The question** below the hero
+3. **Confidence Dashboard** — visual showing each advisor's confidence before/after debate with directional arrows. Color-code: green (7+), yellow (4-6), red (1-3). Machiavelli pass/fail status.
+4. **Agreement/disagreement map** — which advisors aligned and diverged, with framework labels
 5. **Collapsible sections** for each advisor's full response + debate update (collapsed by default)
 6. **Collapsible section** for peer review highlights
-7. **Collapsible section** for Lo Scettico's attack
+7. **Collapsible section** for Machiavelli's steelman-then-attack
 8. **Footer** with timestamp
 
-Clean styling: white background, subtle borders, system font stack, soft accent colors per archetype. Professional briefing document feel.
+Clean styling: white background, subtle borders, system font stack, soft accent colors per advisor. Professional briefing document feel.
 
 Open the HTML file after generating.
 
@@ -338,11 +419,11 @@ Open the HTML file after generating.
 Save as `council-transcript-[timestamp].md`:
 - Original question
 - Framed question
-- All 6 initial advisor responses with confidence
-- All 6 peer reviews (with anonymization mapping revealed)
-- All 6 debate round responses with updated confidence
-- Lo Scettico's attack
-- Il Giudice's full synthesis
+- All 4 initial advisor responses with confidence
+- All 4 peer reviews (with anonymization mapping revealed)
+- All 4 debate round responses with updated confidence
+- Machiavelli's steelman-then-attack
+- Salomone's full synthesis
 
 ---
 
@@ -359,9 +440,11 @@ council-transcript-[timestamp].md  # full transcript
 ## important notes
 
 - **Always spawn advisors in parallel.** Sequential spawning lets earlier responses bleed into later ones.
-- **Always anonymize for peer review.** Prevents deference to certain archetypes.
-- **Il Giudice can disagree with the majority.** If the dissenter's reasoning is strongest, side with them.
+- **Always anonymize for peer review.** Prevents deference to certain frameworks.
+- **Salomone can disagree with the majority.** If the dissenter's reasoning is strongest, side with them.
 - **Don't convene for trivial questions.** If there's one right answer, just answer it.
-- **Confidence is king.** In single-model conclaves, confidence scoring detects real vs. superficial agreement. If all 6 advisors give 9/10, be suspicious — genuine uncertainty produces variance.
-- **Lo Scettico matters most when everyone agrees.** Unanimous agreement from a single model is a yellow flag, not green.
+- **Confidence is king.** In single-model conclaves, confidence scoring detects real vs. superficial agreement. If all 4 advisors give 9/10, be suspicious — genuine uncertainty produces variance.
+- **Machiavelli matters most when everyone agrees.** Unanimous agreement from a single model is a yellow flag, not green.
+- **Procedures, not personas.** Each advisor prompt gives explicit procedural steps. The Italian names are mnemonic labels for the analytical frameworks — they are NOT character instructions. Do not add personality traits, speaking styles, or roleplay instructions to advisor prompts.
 - **Italian names, English reasoning.** The archetypes have Italian names for identity, but all prompts and reasoning run in English for maximum model performance.
+- **Steelman before attack.** Machiavelli must articulate the strongest version of the recommendation before attempting to destroy it. This prevents the -10 to -40% accuracy degradation that pure adversarial framing causes.

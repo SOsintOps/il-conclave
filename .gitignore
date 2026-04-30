@@ -9,10 +9,9 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Output del conclave (esclusi gli esempi)
+# Output del conclave
 council-report-*.html
 council-transcript-*.md
-!esempio/
 
 # Temp
 *.tmp
