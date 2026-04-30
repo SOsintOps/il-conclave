@@ -1,25 +1,25 @@
 # Il Conclave
 
-**Un consiglio di 8 archetipi AI che analizza, dibatte e demolisce le tue decisioni prima che sia troppo tardi.**
+**Un consiglio di 4 procedure analitiche forzate che analizza, dibatte e demolisce le tue decisioni prima che sia troppo tardi.**
 
-Il Conclave prende una domanda, un'idea o una decisione e la passa attraverso 6 consiglieri indipendenti, una peer review anonima, un round di dibattito, un attacco Red Team e una sintesi finale pesata per confidenza. Il tutto usando un singolo modello LLM.
+Il Conclave prende una domanda, un'idea o una decisione e la passa attraverso 4 advisor indipendenti — ciascuno con un framework analitico strutturato — una peer review anonima, un round di dibattito, un attacco Steelman-then-Attack e una sintesi finale pesata per confidenza. Il tutto usando un singolo modello LLM.
 
 Questo progetto nasce dallo studio della metodologia [LLM Council di Andrej Karpathy](https://github.com/karpathy/llm-council) e della sua [adattazione come skill per Claude](https://github.com/tenfoldmarc/llm-council-skill) di tenfoldmarc. Il Conclave estende entrambi con modifiche pensate per compensare il limite principale dell'approccio single-model: la mancanza di vera diversità tra gli advisor.
 
+**Principio chiave:** la divergenza viene dalle procedure, non dalle personas. Ogni advisor segue un framework analitico con output strutturato obbligatorio. I nomi italiani sono etichette mnemoniche, non istruzioni di personalità.
+
 ---
 
-## Gli Otto Archetipi
+## I Sei Archetipi
 
-| Soprannome | Archetipo | Framework | Ruolo |
-|------------|-----------|-----------|-------|
-| *Savonarola* | [**L'Avvocato del Diavolo**](docs/archetipi/savonarola.md) | [Pre-Mortem](docs/framework/pre-mortem.md) | Assume che la decisione sia già fallita e spiega perché |
-| *Galileo* | [**Il Filosofo**](docs/archetipi/galileo.md) | [5 Whys + Vincoli](docs/framework/5-whys.md) | Scava fino alla radice del problema reale |
-| *Marco Polo* | [**L'Esploratore**](docs/archetipi/marco-polo.md) | [Matrice Costo Opportunità](docs/framework/opportunity-cost.md) | Cerca l'upside che tutti gli altri ignorano |
-| *Pinocchio* | [**Lo Straniero**](docs/archetipi/pinocchio.md) | [Test dell'Ingenuo](docs/framework/fresh-eyes.md) | Vede quello che gli esperti non vedono più |
-| *Brunelleschi* | [**Il Capomastro**](docs/archetipi/brunelleschi.md) | [Piano Lunedì Mattina](docs/framework/monday-morning.md) | Trasforma le idee in azioni concrete entro 72 ore |
-| *Falcone* | [**L'Investigatore**](docs/archetipi/falcone.md) | [ACH](docs/framework/ach.md) | Genera ipotesi concorrenti e le valuta contro le evidenze |
-| *Machiavelli* | [**Lo Scettico**](docs/archetipi/machiavelli.md) | [Red Team](docs/framework/red-team.md) | Tenta di distruggere la raccomandazione emergente |
-| *Salomone* | [**Il Giudice**](docs/archetipi/salomone.md) | [Sintesi pesata](docs/framework/confidence-weighted.md) | Sintetizza il verdetto finale pesando la confidenza |
+| Soprannome | Framework | Ruolo |
+|------------|-----------|-------|
+| *Savonarola* | [Pre-Mortem](docs/framework/pre-mortem.md) | Assume che la decisione sia già fallita e spiega perché |
+| *Galileo* | [5 Whys + Vincoli](docs/framework/5-whys.md) | Scava fino alla radice del problema reale |
+| *Marco Polo* | [Matrice Costo Opportunità](docs/framework/opportunity-cost.md) | Cerca l'upside che tutti gli altri ignorano |
+| *Falcone* | [ACH](docs/framework/ach.md) | Genera ipotesi concorrenti e le valuta contro le evidenze |
+| *Machiavelli* | [Steelman-then-Attack](docs/framework/red-team.md) | Rafforza la raccomandazione, poi tenta di distruggerla |
+| *Salomone* | [Sintesi pesata](docs/framework/confidence-weighted.md) | Sintetizza il verdetto finale pesando la confidenza |
 
 ## Come Funziona
 
@@ -39,34 +39,34 @@ Domanda dell'utente
 └──────┬───────┘
        │
        ▼
-┌───────────────────────────────────────────────────────────────┐
-│                 6 Consiglieri in Parallelo                     │
-│  Avvocato │ Filosofo │ Esploratore │ Straniero │ Capomastro │ Investigatore │
-│  + Confidenza 1-10 per ciascuno                               │
-└──────────────────────────┬────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────┐
+│              4 Advisor Procedurali in Parallelo            │
+│  Pre-Mortem │ 5 Whys │ Costo Opportunità │ ACH            │
+│  + Confidenza 1-10 per ciascuno                           │
+└──────────────────────────┬────────────────────────────────┘
                    │
                    ▼
 ┌──────────────────────────────────────────────────┐
 │           Peer Review Anonima                     │
-│  Risposte anonimizzate A-E, ordine randomizzato  │
+│  Risposte anonimizzate A-D, ordine randomizzato  │
 └──────────────────┬───────────────────────────────┘
                    │
                    ▼
 ┌──────────────────────────────────────────────────┐
 │           Round di Dibattito                      │
-│  Ogni consigliere: CONCEDI / DIFENDI / AGGIORNA  │
+│  Ogni advisor: CONCEDI / DIFENDI / AGGIORNA      │
 │  + Confidenza aggiornata                         │
 └──────────────────┬───────────────────────────────┘
                    │
                    ▼
 ┌──────────────────────────────────────────────────┐
-│           Lo Scettico (Red Team)                  │
-│  Attacca la raccomandazione emergente             │
+│           Machiavelli (Steelman-then-Attack)      │
+│  Rafforza la raccomandazione, poi la attacca      │
 └──────────────────┬───────────────────────────────┘
                    │
                    ▼
 ┌──────────────────────────────────────────────────┐
-│           Il Giudice (Sintesi Finale)             │
+│           Salomone (Sintesi Finale)               │
 │  Verdetto pesato per confidenza                  │
 │  + Dashboard di confidenza                       │
 └──────────────────┬───────────────────────────────┘
@@ -77,12 +77,13 @@ Domanda dell'utente
 
 ## Cosa Cambia Rispetto agli Originali
 
-Questo skill introduce quattro miglioramenti specifici per compensare l'uso di un singolo modello. Il dettaglio completo è in [`docs/MODIFICHE.md`](docs/MODIFICHE.md).
+Questo skill introduce cinque miglioramenti specifici per compensare l'uso di un singolo modello. Il dettaglio completo è in [`docs/MODIFICHE.md`](docs/MODIFICHE.md).
 
-1. **Framework analitici forzati** — Ogni consigliere segue una metodologia strutturata specifica, non solo un "atteggiamento diverso"
-2. **Confidence scoring** — Punteggio 1-10 con incertezza esplicita, usato dal Giudice per pesare le opinioni
-3. **Round di dibattito** — I consiglieri rispondono alle critiche: concedono, difendono o aggiornano la posizione
-4. **Red Team (Lo Scettico)** — Un agente dedicato tenta di demolire la raccomandazione prima della sintesi
+1. **Procedure, non personas** — Ogni advisor segue step procedurali con output strutturato obbligatorio, non un "atteggiamento diverso"
+2. **4 framework ortogonali** — Pre-Mortem, 5 Whys, Opportunity Cost, ACH: percorsi di ragionamento strutturalmente incompatibili
+3. **Confidence scoring** — Punteggio 1-10 con incertezza esplicita, usato dal Giudice per pesare le opinioni
+4. **Round di dibattito** — Gli advisor rispondono alle critiche: concedono, difendono o aggiornano la posizione
+5. **Steelman-then-Attack** — L'agente adversariale deve prima rafforzare la raccomandazione, poi attaccarla. Riduce il rischio di degradazione da adversarial puro (-10/40%)
 
 ## Installazione
 
@@ -110,16 +111,8 @@ Ogni sessione produce due file:
 
 | File | Descrizione |
 |------|-------------|
-| `council-report-[timestamp].html` | Report visivo con dashboard di confidenza, pensato per essere scannerizzato rapidamente |
+| `council-report-[timestamp].html` | Report visivo con verdetto immediato e dashboard di confidenza |
 | `council-transcript-[timestamp].md` | Transcript completo di tutte le fasi, utile per riferimento futuro |
-
-## Esempio
-
-Vuoi vedere Il Conclave in azione? Abbiamo chiesto al Conclave di analizzare se stesso — la propria struttura, i propri limiti, alla luce della ricerca accademica corrente.
-
-**[Leggi l'esempio completo →](esempio/esempio.md)**
-
-Verdetto: parzialmente efficace (6.5/10). Il processo ha scoperto tre punti ciechi che nessun consigliere aveva nel brief iniziale.
 
 ## Fonti e Attribuzioni
 

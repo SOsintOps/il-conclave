@@ -5,6 +5,22 @@ Tutti i cambiamenti notevoli di questo progetto saranno documentati in questo fi
 Il formato è basato su [Keep a Changelog](https://keepachangelog.com/it/1.1.0/),
 e questo progetto aderisce al [Versionamento Semantico](https://semver.org/lang/it/).
 
+## [0.2.0] - 2026-04-30
+
+### Cambiato
+- **Architettura procedurale:** prompt degli advisor riscritti come procedure con step obbligatori, non istruzioni di personalità
+- **4 advisor invece di 6:** ridotto roster per evitare diminishing returns (ricerca DMAD, ICLR 2025)
+- **Steelman-then-Attack:** Machiavelli deve prima rafforzare la raccomandazione, poi attaccarla (sostituisce Red Team puro)
+- Report HTML con hero section per verdetto immediato
+- Peer review con 4 risposte anonimizzate (A-D) invece di 6 (A-F)
+
+### Rimosso
+- Pinocchio (Lo Straniero / Fresh Eyes Test) — rimosso dal roster advisor
+- Brunelleschi (Il Capomastro / Monday Morning Plan) — rimosso dal roster advisor
+- Cartella esempio/ — verrà ricreata con nuovi esempi
+- Schede archetype per personaggi rimossi
+- Schede framework per metodologie rimosse (Fresh Eyes, Monday Morning)
+
 ## [0.1.0] - 2026-04-30
 
 ### Aggiunto
