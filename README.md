@@ -10,16 +10,16 @@ Questo progetto nasce dallo studio della metodologia [LLM Council di Andrej Karp
 
 ## Gli Otto Archetipi
 
-| Archetipo | Soprannome | Framework | Ruolo |
-|-----------|-----------|-----------|-------|
-| [**L'Avvocato del Diavolo**](docs/archetipi/savonarola.md) | *Savonarola* | [Pre-Mortem](docs/framework/pre-mortem.md) | Assume che la decisione sia già fallita e spiega perché |
-| [**Il Filosofo**](docs/archetipi/galileo.md) | *Galileo* | [5 Whys + Vincoli](docs/framework/5-whys.md) | Scava fino alla radice del problema reale |
-| [**L'Esploratore**](docs/archetipi/marco-polo.md) | *Marco Polo* | [Matrice Costo Opportunità](docs/framework/opportunity-cost.md) | Cerca l'upside che tutti gli altri ignorano |
-| [**Lo Straniero**](docs/archetipi/pinocchio.md) | *Pinocchio* | [Test dell'Ingenuo](docs/framework/fresh-eyes.md) | Vede quello che gli esperti non vedono più |
-| [**Il Capomastro**](docs/archetipi/brunelleschi.md) | *Brunelleschi* | [Piano Lunedì Mattina](docs/framework/monday-morning.md) | Trasforma le idee in azioni concrete entro 72 ore |
-| [**L'Investigatore**](docs/archetipi/falcone.md) | *Falcone* | [ACH](docs/framework/ach.md) | Genera ipotesi concorrenti e le valuta contro le evidenze |
-| [**Il Sabotatore**](docs/archetipi/machiavelli.md) | *Machiavelli* | [Red Team](docs/framework/red-team.md) | Tenta di distruggere la raccomandazione emergente |
-| [**Il Giudice**](docs/archetipi/salomone.md) | *Salomone* | [Sintesi pesata](docs/framework/confidence-weighted.md) | Sintetizza il verdetto finale pesando la confidenza |
+| Ruolo | Soprannome | Framework | Archetipo |
+|-------|-----------|-----------|-----------|
+| Assume che la decisione sia già fallita e spiega perché | *Savonarola* | [Pre-Mortem](docs/framework/pre-mortem.md) | [**L'Avvocato del Diavolo**](docs/archetipi/savonarola.md) |
+| Scava fino alla radice del problema reale | *Galileo* | [5 Whys + Vincoli](docs/framework/5-whys.md) | [**Il Filosofo**](docs/archetipi/galileo.md) |
+| Cerca l'upside che tutti gli altri ignorano | *Marco Polo* | [Matrice Costo Opportunità](docs/framework/opportunity-cost.md) | [**L'Esploratore**](docs/archetipi/marco-polo.md) |
+| Vede quello che gli esperti non vedono più | *Pinocchio* | [Test dell'Ingenuo](docs/framework/fresh-eyes.md) | [**Lo Straniero**](docs/archetipi/pinocchio.md) |
+| Trasforma le idee in azioni concrete entro 72 ore | *Brunelleschi* | [Piano Lunedì Mattina](docs/framework/monday-morning.md) | [**Il Capomastro**](docs/archetipi/brunelleschi.md) |
+| Genera ipotesi concorrenti e le valuta contro le evidenze | *Falcone* | [ACH](docs/framework/ach.md) | [**L'Investigatore**](docs/archetipi/falcone.md) |
+| Tenta di distruggere la raccomandazione emergente | *Machiavelli* | [Red Team](docs/framework/red-team.md) | [**Lo Scettico**](docs/archetipi/machiavelli.md) |
+| Sintetizza il verdetto finale pesando la confidenza | *Salomone* | [Sintesi pesata](docs/framework/confidence-weighted.md) | [**Il Giudice**](docs/archetipi/salomone.md) |
 
 ## Come Funziona
 
@@ -60,7 +60,7 @@ Domanda dell'utente
                    │
                    ▼
 ┌──────────────────────────────────────────────────┐
-│           Il Sabotatore (Red Team)                │
+│           Lo Scettico (Red Team)                  │
 │  Attacca la raccomandazione emergente             │
 └──────────────────┬───────────────────────────────┘
                    │
@@ -82,7 +82,7 @@ Questo skill introduce quattro miglioramenti specifici per compensare l'uso di u
 1. **Framework analitici forzati** — Ogni consigliere segue una metodologia strutturata specifica, non solo un "atteggiamento diverso"
 2. **Confidence scoring** — Punteggio 1-10 con incertezza esplicita, usato dal Giudice per pesare le opinioni
 3. **Round di dibattito** — I consiglieri rispondono alle critiche: concedono, difendono o aggiornano la posizione
-4. **Red Team (Il Sabotatore)** — Un agente dedicato tenta di demolire la raccomandazione prima della sintesi
+4. **Red Team (Lo Scettico)** — Un agente dedicato tenta di demolire la raccomandazione prima della sintesi
 
 ## Installazione
 

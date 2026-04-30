@@ -38,7 +38,7 @@ Dipende dalla qualità degli input. Se tutti i consiglieri hanno mancato lo stes
 1. **Consenso Pesato per Confidenza** — dove concordano i consiglieri ad alta confidenza
 2. **Dove il Conclave si Divide** — disaccordi genuini sopravvissuti al dibattito
 3. **Punti Ciechi Scoperti** — emersi solo da peer review o dibattito
-4. **Verdetto del Sabotatore** — Machiavelli ha trovato una falla reale?
+4. **Verdetto dello Scettico** — Machiavelli ha trovato una falla reale?
 5. **La Raccomandazione** — chiara, diretta, pesata per confidenza
 6. **Dashboard di Confidenza** — prima/dopo dibattito per ogni consigliere con frecce direzionali
 7. **La Prima Cosa da Fare** — un singolo passo concreto con timeline

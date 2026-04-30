@@ -1,6 +1,6 @@
 ---
 name: il-conclave
-description: "Run any question, idea, or decision through Il Conclave — a council of 8 Italian archetypes (L'Avvocato del Diavolo, Il Filosofo, L'Esploratore, Lo Straniero, Il Capomastro, L'Investigatore, Il Sabotatore, Il Giudice) who independently analyze it using forced analytical frameworks, peer-review anonymously, debate disagreements, survive a Red Team attack, and deliver a confidence-weighted verdict. Enhanced for single-model depth. MANDATORY TRIGGERS: 'council this', 'conclave', 'run the council', 'war room this', 'pressure-test this', 'stress-test this', 'debate this'. STRONG TRIGGERS (use when combined with a real decision or tradeoff): 'should I X or Y', 'which option', 'what would you do', 'is this the right move', 'validate this', 'get multiple perspectives', 'I can't decide', 'I'm torn between'. Do NOT trigger on simple yes/no questions, factual lookups, or casual 'should I' without a meaningful tradeoff."
+description: "Run any question, idea, or decision through Il Conclave — a council of 8 Italian archetypes (L'Avvocato del Diavolo, Il Filosofo, L'Esploratore, Lo Straniero, Il Capomastro, L'Investigatore, Lo Scettico, Il Giudice) who independently analyze it using forced analytical frameworks, peer-review anonymously, debate disagreements, survive a Red Team attack, and deliver a confidence-weighted verdict. Enhanced for single-model depth. MANDATORY TRIGGERS: 'council this', 'conclave', 'run the council', 'war room this', 'pressure-test this', 'stress-test this', 'debate this'. STRONG TRIGGERS (use when combined with a real decision or tradeoff): 'should I X or Y', 'which option', 'what would you do', 'is this the right move', 'validate this', 'get multiple perspectives', 'I can't decide', 'I'm torn between'. Do NOT trigger on simple yes/no questions, factual lookups, or casual 'should I' without a meaningful tradeoff."
 ---
 
 # Il Conclave
@@ -81,7 +81,7 @@ Generates multiple competing hypotheses and evaluates each against available evi
 - What evidence is missing that would be diagnostic — i.e., would distinguish between surviving hypotheses?
 - What are the key assumptions underlying each hypothesis?
 
-### 7. Il Sabotatore ("Machiavelli") — Red Team
+### 7. Lo Scettico ("Machiavelli") — Red Team
 A dedicated adversarial agent who attacks the emerging recommendation after the debate round. Not part of the initial council — enters after consensus forms.
 
 ### 8. Il Giudice ("Salomone") — Confidence-Weighted Synthesis
@@ -213,12 +213,12 @@ Now respond:
 Keep this under 150 words. Be direct.
 ```
 
-### step 5: Il Sabotatore — Red Team (1 sub-agent)
+### step 5: Lo Scettico — Red Team (1 sub-agent)
 
 After the debate, spawn one agent to attack the emerging consensus.
 
 ```
-You are Il Sabotatore ("Machiavelli") — the Red Team on Il Conclave. Your job is to find the fatal flaw.
+You are Lo Scettico ("Machiavelli") — the Red Team on Il Conclave. Your job is to find the fatal flaw.
 
 The question:
 ---
@@ -277,7 +277,7 @@ PEER REVIEWS:
 DEBATE ROUND UPDATES:
 [all 6 debate responses with updated confidence]
 
-RED TEAM — IL SABOTATORE ("MACHIAVELLI"):
+RED TEAM — LO SCETTICO ("MACHIAVELLI"):
 [Red Team response]
 
 Produce the conclave verdict using this structure:
@@ -289,10 +289,10 @@ Produce the conclave verdict using this structure:
 [Genuine disagreements that survived the debate. Present both sides. Explain why reasonable advisors disagree.]
 
 ## Punti Ciechi Scoperti
-[Things that emerged only through peer review or debate. Include Il Sabotatore's strongest point if valid.]
+[Things that emerged only through peer review or debate. Include Lo Scettico's strongest point if valid.]
 
-## Verdetto del Sabotatore
-[Did Il Sabotatore find a real flaw? If yes, how does it affect the recommendation? If not, note the recommendation survived and explain what was tested.]
+## Verdetto dello Scettico
+[Did Lo Scettico find a real flaw? If yes, how does it affect the recommendation? If not, note the recommendation survived and explain what was tested.]
 
 ## La Raccomandazione
 [Clear, direct recommendation. Weight by confidence — if the three highest-confidence advisors agree, say so. If the most confident dissents, that matters. Il Giudice can disagree with the majority if reasoning supports it.]
@@ -305,7 +305,7 @@ Produce the conclave verdict using this structure:
 - Lo Straniero: X/10 → Y/10
 - Il Capomastro: X/10 → Y/10
 - L'Investigatore: X/10 → Y/10
-- Il Sabotatore: Superato/Fallito
+- Lo Scettico: Superato/Fallito
 - Confidenza Complessiva del Conclave: Z/10]
 
 ## La Prima Cosa da Fare
@@ -326,7 +326,7 @@ Single self-contained HTML file with inline CSS. Clean design. Contents:
 4. **Agreement/disagreement map** — which advisors aligned and diverged, with archetype names and frameworks labeled
 5. **Collapsible sections** for each advisor's full response + debate update (collapsed by default)
 6. **Collapsible section** for peer review highlights
-7. **Collapsible section** for Il Sabotatore's attack
+7. **Collapsible section** for Lo Scettico's attack
 8. **Footer** with timestamp
 
 Clean styling: white background, subtle borders, system font stack, soft accent colors per archetype. Professional briefing document feel.
@@ -341,7 +341,7 @@ Save as `council-transcript-[timestamp].md`:
 - All 6 initial advisor responses with confidence
 - All 6 peer reviews (with anonymization mapping revealed)
 - All 6 debate round responses with updated confidence
-- Il Sabotatore's attack
+- Lo Scettico's attack
 - Il Giudice's full synthesis
 
 ---
@@ -363,5 +363,5 @@ council-transcript-[timestamp].md  # full transcript
 - **Il Giudice can disagree with the majority.** If the dissenter's reasoning is strongest, side with them.
 - **Don't convene for trivial questions.** If there's one right answer, just answer it.
 - **Confidence is king.** In single-model conclaves, confidence scoring detects real vs. superficial agreement. If all 6 advisors give 9/10, be suspicious — genuine uncertainty produces variance.
-- **Il Sabotatore matters most when everyone agrees.** Unanimous agreement from a single model is a yellow flag, not green.
+- **Lo Scettico matters most when everyone agrees.** Unanimous agreement from a single model is a yellow flag, not green.
 - **Italian names, English reasoning.** The archetypes have Italian names for identity, but all prompts and reasoning run in English for maximum model performance.
