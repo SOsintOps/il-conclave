@@ -401,7 +401,7 @@ Generate a visual HTML report: `council-report-[timestamp].html`
 
 Single self-contained HTML file with inline CSS. Clean design. Contents:
 
-1. **Hero section** at the top — verdict score, one-line recommendation, first action. Immediately visible without scrolling.
+1. **Hero section** at the top — verdict score, one-line verdict, numbered action steps, and first action highlighted. Everything the reader needs must be visible without scrolling.
 2. **The question** below the hero
 3. **Confidence Dashboard** — visual showing each advisor's confidence before/after debate with directional arrows. Color-code: green (7+), yellow (4-6), red (1-3). Machiavelli pass/fail status.
 4. **Agreement/disagreement map** — which advisors aligned and diverged, with framework labels
