@@ -78,13 +78,13 @@ Il Red Team è più importante quando tutti concordano. L'unanimità in un counc
 **Originale:** Nomi generici in inglese (Contrarian, First Principles Thinker, ecc.).
 
 **Il Conclave:** Archetipi italiani con nomi e soprannomi che riflettono la funzione:
-- L'Avvocato del Diavolo ("Il Gufo")
-- Il Filosofo ("Maestro dei Perché")
-- L'Esploratore ("L'Orizzonte")
-- Lo Straniero ("Occhi Nuovi")
-- Il Capomastro ("Mani in Pasta")
-- Il Sabotatore ("La Mina")
-- Il Giudice ("La Bilancia")
+- L'Avvocato del Diavolo ("Savonarola") — predicava la rovina di Firenze prima che arrivasse
+- Il Filosofo ("Galileo") — "eppur si muove", rimetteva in discussione tutto
+- L'Esploratore ("Marco Polo") — andò dove nessuno era andato, vide opportunità nel vuoto
+- Lo Straniero ("Pinocchio") — l'ingenuo che con la semplicità rivela verità scomode
+- Il Capomastro ("Brunelleschi") — dall'idea impossibile alla cupola del Duomo
+- Il Sabotatore ("Machiavelli") — analizza il potere e le debolezze senza pietà
+- Il Giudice ("Salomone") — il re saggio che taglia il nodo con saggezza
 
 I prompt interni restano in inglese per massimizzare l'efficienza del modello. I nomi italiani sono per l'identità del progetto e la leggibilità del report.
 
