@@ -113,6 +113,14 @@ Ogni sessione produce due file:
 | `council-report-[timestamp].html` | Report visivo con dashboard di confidenza, pensato per essere scannerizzato rapidamente |
 | `council-transcript-[timestamp].md` | Transcript completo di tutte le fasi, utile per riferimento futuro |
 
+## Esempio
+
+Vuoi vedere Il Conclave in azione? Abbiamo chiesto al Conclave di analizzare se stesso — la propria struttura, i propri limiti, alla luce della ricerca accademica corrente.
+
+**[Leggi l'esempio completo →](esempio/esempio.md)**
+
+Verdetto: parzialmente efficace (6.5/10). Il processo ha scoperto tre punti ciechi che nessun consigliere aveva nel brief iniziale.
+
 ## Fonti e Attribuzioni
 
 Questo progetto si basa sul lavoro di:
