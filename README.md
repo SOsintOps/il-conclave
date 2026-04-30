@@ -10,16 +10,16 @@ Questo progetto nasce dallo studio della metodologia [LLM Council di Andrej Karp
 
 ## Gli Otto Archetipi
 
-| Ruolo | Soprannome | Framework | Archetipo |
-|-------|-----------|-----------|-----------|
-| Assume che la decisione sia già fallita e spiega perché | *Savonarola* | [Pre-Mortem](docs/framework/pre-mortem.md) | [**L'Avvocato del Diavolo**](docs/archetipi/savonarola.md) |
-| Scava fino alla radice del problema reale | *Galileo* | [5 Whys + Vincoli](docs/framework/5-whys.md) | [**Il Filosofo**](docs/archetipi/galileo.md) |
-| Cerca l'upside che tutti gli altri ignorano | *Marco Polo* | [Matrice Costo Opportunità](docs/framework/opportunity-cost.md) | [**L'Esploratore**](docs/archetipi/marco-polo.md) |
-| Vede quello che gli esperti non vedono più | *Pinocchio* | [Test dell'Ingenuo](docs/framework/fresh-eyes.md) | [**Lo Straniero**](docs/archetipi/pinocchio.md) |
-| Trasforma le idee in azioni concrete entro 72 ore | *Brunelleschi* | [Piano Lunedì Mattina](docs/framework/monday-morning.md) | [**Il Capomastro**](docs/archetipi/brunelleschi.md) |
-| Genera ipotesi concorrenti e le valuta contro le evidenze | *Falcone* | [ACH](docs/framework/ach.md) | [**L'Investigatore**](docs/archetipi/falcone.md) |
-| Tenta di distruggere la raccomandazione emergente | *Machiavelli* | [Red Team](docs/framework/red-team.md) | [**Lo Scettico**](docs/archetipi/machiavelli.md) |
-| Sintetizza il verdetto finale pesando la confidenza | *Salomone* | [Sintesi pesata](docs/framework/confidence-weighted.md) | [**Il Giudice**](docs/archetipi/salomone.md) |
+| Archetipo | Ruolo | Framework | Soprannome |
+|-----------|-------|-----------|------------|
+| [**L'Avvocato del Diavolo**](docs/archetipi/savonarola.md) | Assume che la decisione sia già fallita e spiega perché | [Pre-Mortem](docs/framework/pre-mortem.md) | *Savonarola* |
+| [**Il Filosofo**](docs/archetipi/galileo.md) | Scava fino alla radice del problema reale | [5 Whys + Vincoli](docs/framework/5-whys.md) | *Galileo* |
+| [**L'Esploratore**](docs/archetipi/marco-polo.md) | Cerca l'upside che tutti gli altri ignorano | [Matrice Costo Opportunità](docs/framework/opportunity-cost.md) | *Marco Polo* |
+| [**Lo Straniero**](docs/archetipi/pinocchio.md) | Vede quello che gli esperti non vedono più | [Test dell'Ingenuo](docs/framework/fresh-eyes.md) | *Pinocchio* |
+| [**Il Capomastro**](docs/archetipi/brunelleschi.md) | Trasforma le idee in azioni concrete entro 72 ore | [Piano Lunedì Mattina](docs/framework/monday-morning.md) | *Brunelleschi* |
+| [**L'Investigatore**](docs/archetipi/falcone.md) | Genera ipotesi concorrenti e le valuta contro le evidenze | [ACH](docs/framework/ach.md) | *Falcone* |
+| [**Lo Scettico**](docs/archetipi/machiavelli.md) | Tenta di distruggere la raccomandazione emergente | [Red Team](docs/framework/red-team.md) | *Machiavelli* |
+| [**Il Giudice**](docs/archetipi/salomone.md) | Sintetizza il verdetto finale pesando la confidenza | [Sintesi pesata](docs/framework/confidence-weighted.md) | *Salomone* |
 
 ## Come Funziona
 
