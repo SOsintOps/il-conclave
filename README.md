@@ -12,13 +12,13 @@ Questo progetto nasce dallo studio della metodologia [LLM Council di Andrej Karp
 
 | Archetipo | Soprannome | Framework | Ruolo |
 |-----------|-----------|-----------|-------|
-| **L'Avvocato del Diavolo** | *Il Gufo* | Pre-Mortem | Assume che la decisione sia già fallita e spiega perché |
-| **Il Filosofo** | *Maestro dei Perché* | 5 Whys + Vincoli | Scava fino alla radice del problema reale |
-| **L'Esploratore** | *L'Orizzonte* | Matrice Costo Opportunità | Cerca l'upside che tutti gli altri ignorano |
-| **Lo Straniero** | *Occhi Nuovi* | Test dell'Ingenuo | Vede quello che gli esperti non vedono più |
-| **Il Capomastro** | *Mani in Pasta* | Piano Lunedì Mattina | Trasforma le idee in azioni concrete entro 72 ore |
-| **Il Sabotatore** | *La Mina* | Red Team | Tenta di distruggere la raccomandazione emergente |
-| **Il Giudice** | *La Bilancia* | Sintesi pesata | Sintetizza il verdetto finale pesando la confidenza |
+| **L'Avvocato del Diavolo** | *Savonarola* | Pre-Mortem | Assume che la decisione sia già fallita e spiega perché |
+| **Il Filosofo** | *Galileo* | 5 Whys + Vincoli | Scava fino alla radice del problema reale |
+| **L'Esploratore** | *Marco Polo* | Matrice Costo Opportunità | Cerca l'upside che tutti gli altri ignorano |
+| **Lo Straniero** | *Pinocchio* | Test dell'Ingenuo | Vede quello che gli esperti non vedono più |
+| **Il Capomastro** | *Brunelleschi* | Piano Lunedì Mattina | Trasforma le idee in azioni concrete entro 72 ore |
+| **Il Sabotatore** | *Machiavelli* | Red Team | Tenta di distruggere la raccomandazione emergente |
+| **Il Giudice** | *Salomone* | Sintesi pesata | Sintetizza il verdetto finale pesando la confidenza |
 
 ## Come Funziona
 

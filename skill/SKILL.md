@@ -37,35 +37,35 @@ Bad conclave questions:
 
 Each advisor applies a specific analytical framework that constrains their reasoning path. This creates genuine divergence even from the same model.
 
-### 1. L'Avvocato del Diavolo ("Il Gufo") — Pre-Mortem Analysis
+### 1. L'Avvocato del Diavolo ("Savonarola") — Pre-Mortem Analysis
 Assumes the decision has already been made and has **failed spectacularly**. Works backward:
 - What went wrong? (3 most likely failure modes)
 - What early warning signs were ignored?
 - What assumption proved fatally wrong?
 - What would you have done differently knowing the outcome?
 
-### 2. Il Filosofo ("Maestro dei Perché") — 5 Whys + Constraint Mapping
+### 2. Il Filosofo ("Galileo") — 5 Whys + Constraint Mapping
 Ignores the surface question and drills down:
 - Apply 5 Whys to reach the root problem
 - List all constraints (time, money, skills, market, regulatory)
 - Identify which constraints are real vs. assumed
 - Reframe the question based on what's actually being solved
 
-### 3. L'Esploratore ("L'Orizzonte") — Opportunity Cost Matrix
+### 3. L'Esploratore ("Marco Polo") — Opportunity Cost Matrix
 Looks for upside everyone else is missing:
 - What are you giving up by choosing this path? (explicit costs)
 - What adjacent opportunities become available if this works? (option value)
 - What's the 10x version of this idea?
 - What would you do with unlimited resources? (then work backward)
 
-### 4. Lo Straniero ("Occhi Nuovi") — Fresh Eyes Test
+### 4. Lo Straniero ("Pinocchio") — Fresh Eyes Test
 Has zero context. Responds purely to what's presented:
 - What's confusing to someone with no background?
 - What jargon or assumptions does the proposal rely on?
 - As a customer/user/outsider, what's your gut reaction?
 - What's the simplest possible version of this?
 
-### 5. Il Capomastro ("Mani in Pasta") — Monday Morning Plan
+### 5. Il Capomastro ("Brunelleschi") — Monday Morning Plan
 Only cares about execution:
 - What's the single first action? (specific, not "research")
 - What are the first 72 hours?
@@ -73,10 +73,10 @@ Only cares about execution:
 - What resources are needed vs. available right now?
 - Where's the biggest execution risk?
 
-### 6. Il Sabotatore ("La Mina") — Red Team
+### 6. Il Sabotatore ("Machiavelli") — Red Team
 A dedicated adversarial agent who attacks the emerging recommendation after the debate round. Not part of the initial council — enters after consensus forms.
 
-### 7. Il Giudice ("La Bilancia") — Confidence-Weighted Synthesis
+### 7. Il Giudice ("Salomone") — Confidence-Weighted Synthesis
 The chairman. Receives everything: initial analyses, peer reviews, debate updates, Red Team attack. Synthesizes a verdict weighted by advisor confidence scores.
 
 **Why these frameworks create real divergence:** Pre-mortem forces pessimistic backward reasoning. 5 Whys forces depth. Opportunity cost forces comparative thinking. Fresh Eyes forces simplification. Monday Morning forces concrete specificity. These are structurally incompatible reasoning paths — not just different "vibes."
@@ -207,7 +207,7 @@ Keep this under 150 words. Be direct.
 After the debate, spawn one agent to attack the emerging consensus.
 
 ```
-You are Il Sabotatore ("La Mina") — the Red Team on Il Conclave. Your job is to find the fatal flaw.
+You are Il Sabotatore ("Machiavelli") — the Red Team on Il Conclave. Your job is to find the fatal flaw.
 
 The question:
 ---
@@ -234,7 +234,7 @@ Keep this under 200 words. Be ruthless.
 The chairman gets everything: question, all 5 initial responses, all 5 peer reviews, all 5 debate updates, and the Red Team attack.
 
 ```
-You are Il Giudice ("La Bilancia") — the Chairman of Il Conclave. Synthesize the full process into a final verdict.
+You are Il Giudice ("Salomone") — the Chairman of Il Conclave. Synthesize the full process into a final verdict.
 
 The question:
 ---
@@ -242,19 +242,19 @@ The question:
 ---
 
 INITIAL ADVISOR RESPONSES:
-**L'Avvocato del Diavolo ("Il Gufo") — Pre-Mortem:**
+**L'Avvocato del Diavolo ("Savonarola") — Pre-Mortem:**
 [response + confidence]
 
-**Il Filosofo ("Maestro dei Perché") — 5 Whys:**
+**Il Filosofo ("Galileo") — 5 Whys:**
 [response + confidence]
 
-**L'Esploratore ("L'Orizzonte") — Opportunity Cost:**
+**L'Esploratore ("Marco Polo") — Opportunity Cost:**
 [response + confidence]
 
-**Lo Straniero ("Occhi Nuovi") — Fresh Eyes:**
+**Lo Straniero ("Pinocchio") — Fresh Eyes:**
 [response + confidence]
 
-**Il Capomastro ("Mani in Pasta") — Monday Morning:**
+**Il Capomastro ("Brunelleschi") — Monday Morning:**
 [response + confidence]
 
 PEER REVIEWS:
@@ -263,7 +263,7 @@ PEER REVIEWS:
 DEBATE ROUND UPDATES:
 [all 5 debate responses with updated confidence]
 
-RED TEAM — IL SABOTATORE ("LA MINA"):
+RED TEAM — IL SABOTATORE ("MACHIAVELLI"):
 [Red Team response]
 
 Produce the conclave verdict using this structure:
